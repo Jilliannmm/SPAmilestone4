@@ -1,4 +1,4 @@
-let viewMode = "grid";
+ let viewMode = "grid";
 let searchHistory = [];
 
 function renderBooks(books, targetDivId) {
@@ -53,7 +53,6 @@ function setupPagination(items) {
     }).appendTo("#pagination");
   }
 
-  // Automatically render first page
   renderBooks(items.slice(0, pageSize), "#resultsView");
 }
 
@@ -102,22 +101,16 @@ $(document).ready(() => {
     $("#resultsView, #bookshelfView").removeClass("grid").addClass("list");
   });
 
-  // Click for books in search results
   $("#resultsView").on("click", ".book", function () {
     const id = $(this).data("id");
     getBookDetails(id);
   });
 
-  // Click for books in bookshelf
   $("#bookshelfView").on("click", ".book", function () {
     const id = $(this).data("id");
     getBookDetails(id);
   });
 
-  // Load public bookshelf on page load
   loadPublicBookshelf();
-
-  // Load search history if any
   renderSearchHistory();
 });
- 

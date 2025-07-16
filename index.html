@@ -5,43 +5,35 @@
   <title>Book Finder App</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script src="https://unpkg.com/mustache@4.2.0/mustache.min.js"></script>
+  <script src="mustache.min.js"></script> <!-- Local Mustache.js -->
 </head>
 <body>
   <h1>Book Finder</h1>
 
-  <!-- Search Bar -->
   <div>
     <input type="text" id="searchBox" placeholder="Search for books..." />
     <button id="searchBtn">Search</button>
   </div>
 
-  <!-- Search History -->
   <div id="searchHistory">
     <h3>Search History:</h3>
   </div>
 
-  <!-- View Toggle Buttons -->
   <div>
     <button id="gridBtn">Grid View</button>
     <button id="listBtn">List View</button>
   </div>
 
-  <!-- Search Results -->
   <h2>Search Results</h2>
   <div id="resultsView" class="grid"></div>
 
-  <!-- Pagination -->
   <div id="pagination"></div>
 
-  <!-- Book Details Section -->
   <div id="bookDetails"></div>
 
-  <!-- Public Bookshelf -->
   <h2>Public Bookshelf</h2>
   <div id="bookshelfView" class="grid"></div>
 
-  <!-- Templates and Scripts -->
   <script src="templates.js"></script>
   <script src="script.js"></script>
 </body>
